@@ -31,7 +31,7 @@ public class SimpleCalculatorContoller {
 	public Double subtract(@RequestParam(value="input1", required=true) Double input1,@RequestParam(value="input2", required=true) Double input2) {
 		return service.subtract(input1, input2);
 	}
-	@GetMapping("/multipy")
+	@GetMapping("/multiply")
 	public Double multiply(@RequestParam(value="input1", required=true) Double input1,@RequestParam(value="input2", required=true) Double input2) {
 		return service.multiply(input1, input2);
 	}
