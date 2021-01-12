@@ -1,0 +1,5 @@
+package com.calculator.repo;
+
+public interface CalcRepo {
+
+}

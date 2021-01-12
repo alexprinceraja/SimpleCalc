@@ -1,0 +1,11 @@
+package com.calculator.controllers;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class SimpleCalculatorContoller {
+
+	@RequestMapping(method = RequestMethod.GET, value="/add")
+	@ResponseBody
+	
+}

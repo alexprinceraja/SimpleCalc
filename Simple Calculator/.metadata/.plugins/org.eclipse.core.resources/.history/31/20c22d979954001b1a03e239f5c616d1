@@ -1,0 +1,31 @@
+package com.calculator.controllers;
+
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+/**
+ * REST Calculator Main Controller 
+ * @author alexprinceraja.g
+ *
+ */
+@RestController
+public class SimpleCalculatorContoller {
+
+	@PostMapping("/add")
+	public double add(int input1, int input2) {
+		return input2;
+	}
+	@PostMapping("/subtract")
+	public double subtract(int input1, int input2) {
+		return input2;
+	}
+	@PostMapping("/subtract")
+	public double multiply(int input1, int input2) {
+		return input2;
+	}
+	@PostMapping("/subtract")
+	public double divide(int input1, int input2) {
+		return input2;
+	}
+
+}

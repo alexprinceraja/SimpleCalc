@@ -1,0 +1,59 @@
+package com.calculator.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.calculator.model.Calc;
+import com.calculator.repo.CalcRepo;
+
+@Service
+public class CalculatorService {
+	
+	@Autowired
+	CalcRepo repo;
+
+	public Double add(Double a, Double b)
+	{
+		Double c = a+b;
+		repo.save(entityDtoMapping(a, b, c, "+"));
+		return c;
+	}
+	
+	public Double subtract(Double a, Double b)
+	{
+		Double c = a-b;
+		repo.save(entityDtoMapping(a, b, c, "-"));
+		return c;
+	}
+	
+	public Double multiply(Double a, Double b)
+	{
+		Double c = a*b;
+		repo.save(entityDtoMapping(a, b, c, "*"));
+		return c;
+	}
+	
+	public Double divide(Double a, Double b)
+	{
+		if(b!=0) {
+		Double c= a/b;
+		repo.save(entityDtoMapping(a, b, c, "/"));
+		return c;
+		}
+		else
+		{
+			System.out.println("Exception occured while performing division: Arithmatic Exception");
+		}
+		return (double) 0;
+	}
+	
+	private Calc entityDtoMapping(Double a, Double b,Double c, String operator)
+	{
+		Calc calc = new Calc();
+		calc.setInput1(a.toString());
+		calc.setInput2(b.toString());
+		calc.setResult(c.toString());
+		calc.setOperator(operator);
+		return calc;
+	}
+}
