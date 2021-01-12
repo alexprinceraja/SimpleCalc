@@ -13,10 +13,9 @@ import com.calculator.model.ErrorResponse;
 public class CalculatorExceptionHandler {
 
 	@ExceptionHandler(Exception.class)
-    @ResponseBody
-    public ResponseEntity<Object> handleAllOtherErrors(Exception exception) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .contentType(MediaType.APPLICATION_JSON)
-                .body(new ErrorResponse(exception.getMessage()));
-    }
+	@ResponseBody
+	public ResponseEntity<Object> handleAllOtherErrors(Exception exception) {
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).contentType(MediaType.APPLICATION_JSON)
+				.body(new ErrorResponse(exception.getMessage()));
+	}
 }
