@@ -11,10 +11,8 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
 @Entity
-public class Calc implements Serializable{
-	
-	
-	
+public class Calc implements Serializable {
+
 	/**
 	 * 
 	 */
@@ -22,26 +20,22 @@ public class Calc implements Serializable{
 
 	@Id
 	@GeneratedValue(generator = "sequence-generator")
-    @GenericGenerator(
-      name = "sequence-generator",
-      strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
-      parameters = {
-        @Parameter(name = "sequence_name", value = "user_sequence"),
-        @Parameter(name = "initial_value", value = "1"),
-        @Parameter(name = "increment_size", value = "1")
-        })
+	@GenericGenerator(name = "sequence-generator", strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator", parameters = {
+			@Parameter(name = "sequence_name", value = "user_sequence"),
+			@Parameter(name = "initial_value", value = "1"), @Parameter(name = "increment_size", value = "1") })
 	private int id;
 
 	@Column
 	private String input1;
-	
+
 	@Column
 	private String input2;
-	
+
 	@Column
 	private String operator;
-	
-	@Column String result;
+
+	@Column
+	String result;
 
 	public String getInput1() {
 		return input1;
@@ -82,7 +76,5 @@ public class Calc implements Serializable{
 	public void setResult(String result) {
 		this.result = result;
 	}
-	
-	
-	
+
 }

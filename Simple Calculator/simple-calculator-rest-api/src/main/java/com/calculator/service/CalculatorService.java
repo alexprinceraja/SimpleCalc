@@ -10,46 +10,39 @@ import com.calculator.repo.CalcRepo;
 
 @Service
 public class CalculatorService {
-	
+
 	@Autowired
 	CalcRepo repo;
 
-	public Double add(Double a, Double b)
-	{
-		Double c = a+b;
+	public Double add(Double a, Double b) {
+		Double c = a + b;
 		repo.save(entityDtoMapping(a, b, c, "+"));
 		return c;
 	}
-	
-	public Double subtract(Double a, Double b)
-	{
-		Double c = a-b;
+
+	public Double subtract(Double a, Double b) {
+		Double c = a - b;
 		repo.save(entityDtoMapping(a, b, c, "-"));
 		return c;
 	}
-	
-	public Double multiply(Double a, Double b)
-	{
-		Double c = a*b;
+
+	public Double multiply(Double a, Double b) {
+		Double c = a * b;
 		repo.save(entityDtoMapping(a, b, c, "*"));
 		return c;
 	}
-	
-	public Double divide(Double a, Double b) throws Exception
-	{
-		if(b!=0) {
-		Double c= a/b;
-		repo.save(entityDtoMapping(a, b, c, "/"));
-		return c;
-		}
-		else
-		{
+
+	public Double divide(Double a, Double b) throws Exception {
+		if (b != 0) {
+			Double c = a / b;
+			repo.save(entityDtoMapping(a, b, c, "/"));
+			return c;
+		} else {
 			throw new Exception("Number cannot be divided by 0");
 		}
 	}
-	
-	private Calc entityDtoMapping(Double a, Double b,Double c, String operator)
-	{
+
+	private Calc entityDtoMapping(Double a, Double b, Double c, String operator) {
 		Calc calc = new Calc();
 		calc.setInput1(a.toString());
 		calc.setInput2(b.toString());
@@ -57,9 +50,8 @@ public class CalculatorService {
 		calc.setOperator(operator);
 		return calc;
 	}
-	
-	public List<Calc> getHistory()
-	{
+
+	public List<Calc> getHistory() {
 		return repo.getHistory();
 	}
 }
