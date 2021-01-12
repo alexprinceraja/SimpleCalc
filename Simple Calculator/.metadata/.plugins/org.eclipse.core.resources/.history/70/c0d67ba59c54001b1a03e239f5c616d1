@@ -1,0 +1,36 @@
+package com.calculator.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CalculatorService {
+
+	public double add(double a, double b)
+	{
+		return a+b;
+	}
+	
+	public double subtract(double a, double b)
+	{
+		return a-b;
+	}
+	
+	public double multiply(double a, double b)
+	{
+		return a*b;
+	}
+	
+	public double divide(double a, double b)
+	{
+		double c =0;
+		try {
+		c= a/b;
+		}
+		catch (Exception ex)
+		{
+			System.out.println("Exception occured while performing division: "+ ex.getLocalizedMessage());
+		}
+		
+		return c;
+	}
+}
