@@ -16,16 +16,15 @@ public class ControllerTest {
 
 	@BeforeEach
 	public void setup() {
-	    MockitoAnnotations.initMocks(this);
+		MockitoAnnotations.initMocks(this);
 	}
-	
+
 	@InjectMocks
 	SimpleCalculatorContoller controller;
-	
+
 	@Mock
 	CalculatorService service;
-	
-	    
+
 	@Test
 	public void addTest() {
 		Double expected = 3d;
@@ -33,7 +32,7 @@ public class ControllerTest {
 		Double actual = controller.add(1d, 2d);
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void subtractTest() {
 		Double expected = 5d;
@@ -41,7 +40,7 @@ public class ControllerTest {
 		Double actual = controller.subtract(10d, 5d);
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void multiplyTest() {
 		Double expected = 15d;
@@ -49,7 +48,7 @@ public class ControllerTest {
 		Double actual = controller.multiply(10d, 3d);
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void divideTest() throws Exception {
 		Double expected = 5d;

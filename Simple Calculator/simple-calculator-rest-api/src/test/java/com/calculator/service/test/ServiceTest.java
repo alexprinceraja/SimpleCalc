@@ -15,24 +15,21 @@ public class ServiceTest {
 
 	@BeforeEach
 	public void setup() {
-	    MockitoAnnotations.initMocks(this);
+		MockitoAnnotations.initMocks(this);
 	}
-	
+
 	@Mock
 	CalcRepo repo;
 
 	@InjectMocks
 	CalculatorService service;
-	
-	    
+
 	@Test
 	public void divideFailTest() {
 		Exception expected = new Exception("Number cannot be divided by 0");
 		try {
 			service.divide(10d, 0d);
-		}
-		catch(Exception ex)
-		{
+		} catch (Exception ex) {
 			assertEquals(expected.getLocalizedMessage(), ex.getLocalizedMessage());
 		}
 	}
