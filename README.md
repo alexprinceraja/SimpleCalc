@@ -13,11 +13,11 @@ This project was implemented to execute basic mathematical operations.
 
 Run it as Java Application (simple-calculator-rest-api). Navigate to `http://localhost:8080/`. The app will run automatically, attached screen shot for the reference.
 Request Mapping URL:
-	  http://localhost:8080/calculator/add?input1=10&input2=2
-	  http://localhost:8080/calculator/subtract?input9=1&input2=4
-	  http://localhost:8080/calculator/multiply?input5=1&input2=6
-	  http://localhost:8080/calculator/divide?input=88&input2=8
-	  http://localhost:8080/calculator/history
+	 add 		- http://localhost:8080/calculator/add?input1=10&input2=2
+	 subtract 	- http://localhost:8080/calculator/subtract?input9=1&input2=4
+	 multiply 	- http://localhost:8080/calculator/multiply?input5=1&input2=6
+	 divide 	- http://localhost:8080/calculator/divide?input=88&input2=8
+	 history 	- http://localhost:8080/calculator/history
   
 
 ## Further help
