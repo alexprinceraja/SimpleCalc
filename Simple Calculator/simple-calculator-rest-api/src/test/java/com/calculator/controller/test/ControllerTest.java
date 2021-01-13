@@ -28,32 +28,32 @@ public class ControllerTest {
 	@Test
 	public void addTest() {
 		Double expected = 3d;
-		Mockito.when(service.add(Mockito.anyDouble(), Mockito.anyDouble())).thenReturn(expected);
-		Double actual = controller.add(1d, 2d);
+		Mockito.when(service.add(Mockito.anyInt(), Mockito.anyInt())).thenReturn(expected);
+		Double actual = controller.add(1, 2);
 		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void subtractTest() {
 		Double expected = 5d;
-		Mockito.when(service.subtract(Mockito.anyDouble(), Mockito.anyDouble())).thenReturn(expected);
-		Double actual = controller.subtract(10d, 5d);
+		Mockito.when(service.subtract(Mockito.anyInt(), Mockito.anyInt())).thenReturn(expected);
+		Double actual = controller.subtract(10, 5);
 		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void multiplyTest() {
 		Double expected = 15d;
-		Mockito.when(service.multiply(Mockito.anyDouble(), Mockito.anyDouble())).thenReturn(expected);
-		Double actual = controller.multiply(10d, 3d);
+		Mockito.when(service.multiply(Mockito.anyInt(), Mockito.anyInt())).thenReturn(expected);
+		Double actual = controller.multiply(10, 3);
 		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void divideTest() throws Exception {
 		Double expected = 5d;
-		Mockito.when(service.divide(Mockito.anyDouble(), Mockito.anyDouble())).thenReturn(expected);
-		Double actual = controller.divide(15d, 3d);
+		Mockito.when(service.divide(Mockito.anyInt(), Mockito.anyInt())).thenReturn(expected);
+		Double actual = controller.divide(15, 3);
 		assertEquals(expected, actual);
 	}
 }

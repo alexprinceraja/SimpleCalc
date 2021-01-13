@@ -24,11 +24,12 @@ public class ServiceTest {
 	@InjectMocks
 	CalculatorService service;
 
+	
 	@Test
 	public void divideFailTest() {
 		Exception expected = new Exception("Number cannot be divided by 0");
 		try {
-			service.divide(10d, 0d);
+			service.divide(10, 0);
 		} catch (Exception ex) {
 			assertEquals(expected.getLocalizedMessage(), ex.getLocalizedMessage());
 		}

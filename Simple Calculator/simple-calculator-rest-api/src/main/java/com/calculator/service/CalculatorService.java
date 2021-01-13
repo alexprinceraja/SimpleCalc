@@ -14,38 +14,38 @@ public class CalculatorService {
 	@Autowired
 	CalcRepo repo;
 
-	public Double add(Double a, Double b) {
-		Double c = a + b;
+	public Double add(int a, int b) {
+		Double c = (double) (a + b);
 		repo.save(entityDtoMapping(a, b, c, "+"));
 		return c;
 	}
 
-	public Double subtract(Double a, Double b) {
-		Double c = a - b;
+	public Double subtract(int a, int b) {
+		Double c = (double) (a - b);
 		repo.save(entityDtoMapping(a, b, c, "-"));
 		return c;
 	}
 
-	public Double multiply(Double a, Double b) {
-		Double c = a * b;
+	public Double multiply(int a, int b) {
+		Double c = (double) (a * b);
 		repo.save(entityDtoMapping(a, b, c, "*"));
 		return c;
 	}
 
-	public Double divide(Double a, Double b) throws Exception {
+	public Double divide(int a, int b) throws Exception {
 		if (b != 0) {
-			Double c = a / b;
+			Double c = (double) (a / b);
 			repo.save(entityDtoMapping(a, b, c, "/"));
 			return c;
 		} else {
 			throw new Exception("Number cannot be divided by 0");
 		}
 	}
-
-	private Calc entityDtoMapping(Double a, Double b, Double c, String operator) {
+	
+	private Calc entityDtoMapping(int a, int b, Double c, String operator) {
 		Calc calc = new Calc();
-		calc.setInput1(a.toString());
-		calc.setInput2(b.toString());
+		calc.setInput1(String.valueOf(a));
+		calc.setInput2(String.valueOf(b));
 		calc.setResult(c.toString());
 		calc.setOperator(operator);
 		return calc;

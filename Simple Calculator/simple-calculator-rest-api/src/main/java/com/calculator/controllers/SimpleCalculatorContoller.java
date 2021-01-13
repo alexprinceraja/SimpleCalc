@@ -24,19 +24,19 @@ public class SimpleCalculatorContoller {
 	CalculatorService service;
 
 	@GetMapping("/add")
-	public Double add(@RequestParam(value="input1", required=true) Double input1,@RequestParam(value="input2", required=true) Double input2) {
+	public Double add(@RequestParam(value="input1", required=true) int input1,@RequestParam(value="input2", required=true) int input2) {
 		return service.add(input1, input2);
 	}
 	@GetMapping("/subtract")
-	public Double subtract(@RequestParam(value="input1", required=true) Double input1,@RequestParam(value="input2", required=true) Double input2) {
+	public Double subtract(@RequestParam(value="input1", required=true) int input1,@RequestParam(value="input2", required=true) int input2) {
 		return service.subtract(input1, input2);
 	}
 	@GetMapping("/multiply")
-	public Double multiply(@RequestParam(value="input1", required=true) Double input1,@RequestParam(value="input2", required=true) Double input2) {
+	public Double multiply(@RequestParam(value="input1", required=true) int input1,@RequestParam(value="input2", required=true) int input2) {
 		return service.multiply(input1, input2);
 	}
 	@GetMapping("/divide")
-	public Double divide(@RequestParam(value="input1", required=true) Double input1,@RequestParam(value="input2", required=true) Double input2) throws Exception {
+	public Double divide(@RequestParam(value="input1", required=true) int input1,@RequestParam(value="input2", required=true) int input2) throws Exception {
 		return service.divide(input1, input2);
 	}
 	
