@@ -41,7 +41,7 @@ public class CalculatorService {
 			throw new ArithmeticException("Number cannot be divided by 0");
 		}
 	}
-	
+
 	private Calc entityDtoMapping(int a, int b, Double c, String operator) {
 		Calc calc = new Calc();
 		calc.setInput1(String.valueOf(a));
