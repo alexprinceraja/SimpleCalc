@@ -32,13 +32,13 @@ public class CalculatorService {
 		return c;
 	}
 
-	public Double divide(int a, int b) throws Exception {
+	public Double divide(int a, int b) throws ArithmeticException {
 		if (b != 0) {
 			Double c = (double) (a / b);
 			repo.save(entityDtoMapping(a, b, c, "/"));
 			return c;
 		} else {
-			throw new Exception("Number cannot be divided by 0");
+			throw new ArithmeticException("Number cannot be divided by 0");
 		}
 	}
 	

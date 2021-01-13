@@ -36,7 +36,7 @@ public class SimpleCalculatorContoller {
 		return service.multiply(input1, input2);
 	}
 	@GetMapping("/divide")
-	public Double divide(@RequestParam(value="input1", required=true) int input1,@RequestParam(value="input2", required=true) int input2) throws Exception {
+	public Double divide(@RequestParam(value="input1", required=true) int input1,@RequestParam(value="input2", required=true) int input2) throws ArithmeticException {
 		return service.divide(input1, input2);
 	}
 	
