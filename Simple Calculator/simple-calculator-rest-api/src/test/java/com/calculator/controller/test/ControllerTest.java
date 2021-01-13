@@ -71,8 +71,4 @@ public class ControllerTest {
 		assertEquals(expected, actual);
 	}
 
-	@Test
-	public void main() {
-		SimpleCalculatorRestApiApplication.main(new String[] {});
-	}
 }
