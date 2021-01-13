@@ -4,10 +4,10 @@ This project was implemented to execute basic mathematical operations.
 
 ## Development
 
-1.Maven-3.6.3
-2.Spring Boot 2.4.1
-3.H2 Database  
-4.Junit 
+	1.Maven-3.6.3
+	2.Spring Boot 2.4.1
+	3.H2 Database  
+	4.Junit 
 
 ## Running
 
@@ -22,8 +22,8 @@ Request Mapping URL:
 
 ## Further help
 
-1.Addition
-2.Subtraction
-3.Multiplication
-4.Division
-5.History
+	1.Addition
+	2.Subtraction
+	3.Multiplication
+	4.Division
+	5.History
