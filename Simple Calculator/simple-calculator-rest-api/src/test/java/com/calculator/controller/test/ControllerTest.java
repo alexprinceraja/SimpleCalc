@@ -12,7 +12,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import com.calculator.SimpleCalculatorRestApiApplication;
 import com.calculator.controllers.SimpleCalculatorContoller;
 import com.calculator.model.Calc;
 import com.calculator.service.CalculatorService;
