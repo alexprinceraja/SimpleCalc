@@ -20,7 +20,7 @@ Request Mapping URL:
 	5. history 	- http://localhost:8080/calculator/history
   
 
-## Further help
+## Development Functionality
 
 	1.Addition
 	2.Subtraction
