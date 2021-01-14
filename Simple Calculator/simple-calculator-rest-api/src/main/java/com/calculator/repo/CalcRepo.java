@@ -11,6 +11,6 @@ import com.calculator.model.Calc;
 @Repository
 public interface CalcRepo extends JpaRepository<Calc, Integer> {
 
-	@Query("select cal from Calc cal where rownum<10 order by cal.id desc")
+	@Query("select cal from Calc cal order by cal.id desc")
 	List<Calc> getHistory();
 }

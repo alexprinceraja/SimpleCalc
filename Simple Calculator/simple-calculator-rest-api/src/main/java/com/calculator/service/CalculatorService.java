@@ -62,7 +62,7 @@ public class CalculatorService {
 	 */
 	public Double divide(int input1, int input2) throws ArithmeticException {
 		if (input2 != 0) {
-			Double result = (double) (input1 / input2);
+			Double result = Double.valueOf(input1) / Double.valueOf(input2);
 			repo.save(entityDtoMapping(input1, input2, result, "/"));
 			return result;
 		} else {
